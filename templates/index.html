@@ -1,0 +1,138 @@
+{% extends "base.html" %}
+{% block title %}TrustLed AI — Trust Leads. Everything Else Follows.{% endblock %}
+
+{% block content %}
+<section class="hero">
+  <div class="frame"><div class="hero-inner">
+    <div class="hero-chip">TrustLed AI</div>
+    <h1>Trust leads.<br><em>Everything else follows.</em></h1>
+    <p class="hero-sub">AI governance advisory, training, and a weekly newsletter for organisations and individuals bringing AI systems into their business.</p>
+    <div class="hero-btns">
+      <a href="#newsletter" class="btn-green">Subscribe to the Newsletter &#8594;</a>
+      <a href="{{ url_for('contact') }}" class="btn-border">Talk to Us</a>
+    </div>
+  </div></div>
+</section>
+
+<section class="philosophy">
+  <div class="phil-wrap">
+    <div class="sec-label">Our Philosophy</div>
+    <h2>We trained people not to click on anything until identity was verified. AI agents demand the same discipline.</h2>
+    <p>In the cybersecurity world, we taught organisations to pause, to verify, to treat every unknown input as a potential threat until trust was established. AI agents, which increasingly operate as autonomous actors inside business environments, demand that same instinct.</p>
+    <p>Before an AI agent sends an email on your behalf, approves a purchase, or accesses customer data, your organisation should have answered a set of fundamental questions about what that agent is authorised to do, how its behaviour is monitored, and who is accountable when it acts outside its boundaries.</p>
+    <p>AI governance is fundamentally a human factors problem. Systems do not govern themselves. People do. A framework only holds when the people responsible for it understand it, follow it, and are accountable for it. That is why everything we build is designed around human behaviour and human accountability, not around technology alone.</p>
+  </div>
+</section>
+
+<section class="newsletter-featured" id="newsletter">
+  <div class="nl-featured-inner">
+    <div class="nl-left">
+      <div class="sec-label">Every Tuesday</div>
+      <h2>The TrustLed AI Newsletter</h2>
+      <p>AI governance, risk, and compliance for business leaders who are adopting AI and need to get it right, and professionals who are building careers in AI GRC.</p>
+      <ul class="nl-highlights">
+        <li>How to break into AI governance, risk, and compliance when the field is still forming</li>
+        <li>What businesses should have in place before AI enters their operations</li>
+        <li>The certifications, skills, and career moves that actually matter in AI GRC</li>
+        <li>What goes wrong when AI systems are deployed without governance, and what should have been done differently</li>
+      </ul>
+    </div>
+    <div class="nl-right">
+      <div class="sec-label">Free. Weekly.</div>
+      <h3>Join the conversation</h3>
+      <p>Every issue gives you something concrete, whether you're running a company, building a career in AI risk, or figuring out how AI fits into your work.</p>
+      <form class="nl-form" id="subForm">
+        <input type="email" placeholder="Your email address" required>
+        <button type="submit">Subscribe</button>
+      </form>
+      <p class="nl-fine">No spam. Unsubscribe anytime.</p>
+    </div>
+  </div>
+</section>
+
+<section class="services" id="what">
+  <div class="frame">
+    <div class="svc-header">
+      <div class="sec-label">What We Do</div>
+      <h2>Governance advisory, training,<br>and a weekly conversation</h2>
+      <p>We help organisations get AI adoption right before deployment, train the people who will govern it, and publish the most practical thinking about AI risk every week.</p>
+    </div>
+    <div class="svc-grid" style="grid-template-columns:1fr 1fr">
+      <div class="svc-card">
+        <div class="svc-num">01</div>
+        <h3>AI Governance Advisory</h3>
+        <p>We work alongside organisations bringing AI into their operations. Readiness assessments using our six-domain framework, ISO 42001 gap analysis and implementation support, AI policy development, risk assessments, and governance programme design. For organisations that need help deploying AI agents with the right governance in place, we also offer agentic AI services, scoping the governance and managing the deployment end to end.</p>
+        <a href="{{ url_for('agents') }}" class="svc-link">Learn more &#8594;</a>
+      </div>
+      <div class="svc-card">
+        <div class="svc-num">02</div>
+        <h3>TrustLed AI Academy</h3>
+        <p>Career-focused training for people building a career in AI governance, risk, compliance, or AI auditing. Practical workshops for business leaders who need their teams AI-ready before deployment. Two specialisation tracks, real scenarios, and a capstone project you can take into your first job or client meeting.</p>
+        <a href="{{ url_for('academy') }}" class="svc-link">See programmes &#8594;</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="audience" id="who">
+  <div class="frame">
+    <div class="aud-layout">
+      <div class="aud-left">
+        <div class="sec-label">Who It's For</div>
+      </div>
+      <div class="aud-tiles">
+        <div class="aud-tile">
+          <h4>Small &amp; Medium Business Leaders</h4>
+          <p>You want to bring AI into your organisation but need to understand the risks, define the scope, and put the right structure around it before you deploy.</p>
+        </div>
+        <div class="aud-tile">
+          <h4>Aspiring AI Risk &amp; Compliance Professionals</h4>
+          <p>You're looking to build a career in AI risk, compliance, governance, or auditing. You need structured, job-facing training in a field that's still taking shape.</p>
+        </div>
+        <div class="aud-tile">
+          <h4>Individuals</h4>
+          <p>You're using AI in your work and want to think about it more carefully. The newsletter is a good place to start.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="team" id="team">
+  <div class="frame"><div class="team-inner">
+    <div class="sec-label">Who's Behind TrustLed AI</div>
+    <div class="team-grid">
+      <div class="team-card">
+        <h4>Franklin Okeke</h4>
+        <p class="team-role">Chief Strategist</p>
+        <p class="team-bio">AI Governance &amp; Compliance Engineer | CISA certified | ISO 42001 Lead Auditor | MSc Cybersecurity &amp; Human Factors. Creator of the TrustLed AI Newsletter.</p>
+      </div>
+      <div class="team-card">
+        <h4>Prince Chukwuemeka</h4>
+        <p class="team-role">AI &amp; ML Engineer</p>
+        <p class="team-bio">MSc Cybersecurity. CISA certified. ISO 27001 Expert. Brings technical depth to AI agent deployment and ensures governance is grounded in how AI systems actually work in production.</p>
+      </div>
+    </div>
+  </div></div>
+</section>
+
+<section class="cta" id="contact">
+  <div class="frame"><div class="cta-inner">
+    <h2>Let's have the conversation<br>before the deployment</h2>
+    <p>Whether you need a governance assessment, training for your team, or just want to think through how AI is entering your business.</p>
+    <a href="{{ url_for('contact') }}" class="btn-cta">Get in Touch &#8594;</a>
+  </div></div>
+</section>
+{% endblock %}
+
+{% block scripts %}
+<script>
+document.getElementById('subForm').addEventListener('submit', function(e) {
+  e.preventDefault();
+  var btn = this.querySelector('button');
+  btn.textContent = 'Thank you!'; btn.style.background = '#16A34A';
+  this.querySelector('input').value = '';
+  setTimeout(function() { btn.textContent = 'Subscribe'; btn.style.background = '#1A1A1A'; }, 3000);
+});
+</script>
+{% endblock %}

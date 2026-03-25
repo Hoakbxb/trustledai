@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>{% block title %}TrustLed AI{% endblock %}</title>
+<link rel="icon" type="image/svg+xml" href="{{ url_for('static', filename='favicon.svg') }}">
+<meta name="description" content="{% block meta_desc %}AI agent services, training, and a weekly newsletter for organisations and individuals bringing AI systems into their business.{% endblock %}">
+<meta name="theme-color" content="#1A1A1A">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<nav class="topnav">
+  <div class="frame">
+    <a href="{{ url_for('home') }}" class="brand">Trust<b>Led</b> AI</a>
+    <ul class="navlist" id="navlist">
+      <li><a href="{{ url_for('agents') }}">Advisory</a></li>
+      <li><a href="{{ url_for('academy') }}">Academy</a></li>
+      <li><a href="{{ url_for('pricing') }}">Pricing</a></li>
+      <li><a href="{{ url_for('about') }}">About</a></li>
+      <li><a href="{{ url_for('contact') }}" class="nav-btn">Get in Touch</a></li>
+    </ul>
+    <button class="mob-toggle" id="mobToggle" aria-label="Menu"><span></span><span></span><span></span></button>
+  </div>
+</nav>
+
+{% block content %}{% endblock %}
+
+<footer class="foot">
+  <div class="frame">
+    <div class="foot-grid">
+      <div class="foot-brand">
+        <a href="{{ url_for('home') }}" class="brand">Trust<b>Led</b> AI</a>
+        <p>Verify before you click. Verify before you deploy.</p>
+      </div>
+      <div class="foot-col">
+        <h4>Services</h4>
+        <a href="{{ url_for('agents') }}">AI Governance Advisory</a>
+        <a href="{{ url_for('academy') }}">Academy</a>
+      </div>
+      <div class="foot-col">
+        <h4>Company</h4>
+        <a href="{{ url_for('about') }}">About Us</a>
+        <a href="{{ url_for('pricing') }}">Pricing</a>
+        <a href="#">Free Downloads</a>
+      </div>
+      <div class="foot-col">
+        <h4>Connect</h4>
+        <a href="mailto:hello@trustledai.com">Email</a>
+        <a href="{{ url_for('contact') }}">Contact</a>
+        <a href="#">LinkedIn</a>
+      </div>
+    </div>
+    <div class="foot-bar">
+      <p>&copy; 2026 TrustLed AI Ltd. All rights reserved.</p>
+      <span class="tagline">Trust leads. Everything else follows.</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+document.getElementById('mobToggle').addEventListener('click', function() {
+  document.getElementById('navlist').classList.toggle('open');
+});
+</script>
+{% block scripts %}{% endblock %}
+</body>
+</html>

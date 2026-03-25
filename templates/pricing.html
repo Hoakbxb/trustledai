@@ -1,0 +1,103 @@
+{% extends "base.html" %}
+{% block title %}Pricing — TrustLed AI{% endblock %}
+{% block meta_desc %}Transparent pricing across all TrustLed AI services. AI agent deployments, academy bootcamp, and business workshops.{% endblock %}
+
+{% block content %}
+<section class="acad-hero">
+  <div class="frame"><div class="hero-inner">
+    <div class="hero-chip">Pricing</div>
+    <h1>Transparent <em>pricing</em></h1>
+    <p class="hero-sub">Everything we offer, what it costs, and what you get. No hidden fees, no surprises.</p>
+  </div></div>
+</section>
+
+<!-- AI AGENT SERVICES PRICING -->
+<section class="pricing-section">
+  <div class="frame">
+    <div class="sec-label" style="color:#4ADE80">AI Governance Advisory</div>
+    <h2>Advisory services that get you deployment-ready</h2>
+    <p>Every engagement is scoped to your needs. Here are our standard ranges.</p>
+    <div class="pricing-grid">
+      <div class="price-card">
+        <div class="price-label">Starting Point</div>
+        <h3>AI Readiness Assessment</h3>
+        <p class="price-desc">Structured assessment using the six-domain framework.</p>
+        <div class="price-amount">&pound;2,000&ndash;&pound;8,000</div>
+        <p class="price-note">2&ndash;4 weeks &middot; Written readiness report</p>
+        <ul class="price-features"><li>Six-domain readiness assessment</li><li>Risk scoring and classification</li><li>Written report with recommendations</li><li>Implementation roadmap</li></ul>
+        <a href="{{ url_for('contact') }}" class="price-btn">Get started &#8594;</a>
+      </div>
+      <div class="price-card featured">
+        <div class="price-label">ISO 42001</div>
+        <h3>Gap Analysis &amp; Implementation</h3>
+        <p class="price-desc">From gap analysis to certification readiness.</p>
+        <div class="price-amount">&pound;3,000&ndash;&pound;20,000</div>
+        <p class="price-note">Gap analysis from &pound;3,000 &middot; Full implementation from &pound;8,000</p>
+        <ul class="price-features"><li>Gap analysis against ISO 42001</li><li>Implementation roadmap</li><li>Policy and documentation development</li><li>Certification preparation support</li></ul>
+        <a href="{{ url_for('contact') }}" class="price-btn">Get started &#8594;</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ACADEMY PRICING -->
+<section class="pricing-section" style="background:#1A1A1A">
+  <div class="frame">
+    <div class="sec-label" style="color:#4ADE80">TrustLed AI Academy</div>
+    <h2>Invest in your career or your team</h2>
+    <p>Inaugural cohort pricing. Early participants help shape the programme and get preferential rates.</p>
+    <div class="pricing-grid">
+      <div class="price-card featured">
+        <div class="price-label">Bootcamp &middot; 2 Tracks</div>
+        <h3>8-Week Online Cohort</h3>
+        <p class="price-desc">Choose Track A (AI GRC) or Track B (AI Auditing).</p>
+        <div class="price-amount">&pound;450</div>
+        <p class="price-note">Inaugural pricing (regular &pound;600) &middot; 20 seats per cohort</p>
+        <ul class="price-features">
+          <li>16 live sessions (24+ hours)</li>
+          <li>Full Readiness Framework toolkit</li>
+          <li>Track-specific capstone project</li>
+          <li>90-day career action plan</li>
+          <li>Certificate specifying your track</li>
+          <li>Alumni community access</li>
+          <li>Group: &pound;380/person (3+ seats)</li>
+          <li>Student / Switcher: &pound;350 (apply via email)</li>
+        </ul>
+        <a href="{{ url_for('contact') }}" class="price-btn">Register Interest &#8594;</a>
+      </div>
+      <div class="price-card">
+        <div class="price-label">Business Leaders Workshop</div>
+        <h3>Delivered to Your Team</h3>
+        <p class="price-desc">A full-day workshop for your organisation's team, online or in-person.</p>
+        <div class="price-amount">&pound;1,500+</div>
+        <p class="price-note">Online from &pound;1,500 &middot; In-person from &pound;2,500 &middot; Up to 25 participants</p>
+        <ul class="price-features">
+          <li>6 hours of live training for your team</li>
+          <li>Readiness checklist &amp; policy templates</li>
+          <li>Completed draft assessment</li>
+          <li>90-day readiness roadmap</li>
+          <li>Certificates for every participant</li>
+          <li>Flexible scheduling</li>
+        </ul>
+        <a href="{{ url_for('contact') }}" class="price-btn">Book a Workshop &#8594;</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="prog-section" style="text-align:center">
+  <div class="frame">
+    <div class="sec-label">Payment</div>
+    <p style="font-size:0.95rem;color:#71717A;max-width:500px;margin:0 auto 16px;line-height:1.7">All prices include VAT. Payment via Stripe or bank transfer. Invoicing available for corporate bookings.</p>
+    <p style="font-size:0.95rem;color:#71717A;max-width:500px;margin:0 auto 16px;line-height:1.7">Most participants expense training through their employer's professional development budget. We provide a formal invoice and a justification letter on request.</p>
+  </div>
+</section>
+
+<section class="cta">
+  <div class="frame"><div class="cta-inner">
+    <h2>Questions about pricing?</h2>
+    <p>We are happy to discuss your specific needs, scope a custom engagement, or help you build the business case for your employer.</p>
+    <a href="{{ url_for('contact') }}" class="btn-cta">Get in Touch &#8594;</a>
+  </div></div>
+</section>
+{% endblock %}

@@ -1,0 +1,98 @@
+{% extends "base.html" %}
+{% block title %}Contact — TrustLed AI{% endblock %}
+{% block meta_desc %}Get in touch with TrustLed AI. AI agent services, academy enquiries, workshop bookings, and general questions.{% endblock %}
+
+{% block content %}
+<section class="contact-hero">
+  <div class="frame">
+    <div class="hero-chip">Contact</div>
+    <h1>Let's <em>talk</em></h1>
+    <p class="hero-sub">Whether you need AI agents deployed, training for your team, or want to discuss how AI is entering your business.</p>
+  </div>
+</section>
+
+<section class="contact-section">
+  <div class="frame">
+    <div class="contact-grid">
+      <div class="contact-info">
+        <h3>Get in touch directly</h3>
+        <p>We respond to every enquiry personally. No bots, no autoresponders, just a conversation with one of the founders.</p>
+
+        <div class="contact-detail">
+          <div>
+            <div class="cd-label">Email</div>
+            <div class="cd-value"><a href="mailto:hello@trustledai.com">hello@trustledai.com</a></div>
+          </div>
+        </div>
+
+        <div class="contact-detail">
+          <div>
+            <div class="cd-label">Website</div>
+            <div class="cd-value"><a href="{{ url_for('home') }}">trustledai.com</a></div>
+          </div>
+        </div>
+
+        <div class="contact-detail">
+          <div>
+            <div class="cd-label">LinkedIn</div>
+            <div class="cd-value"><a href="#" target="_blank">Follow TrustLed AI</a></div>
+          </div>
+        </div>
+
+        <div style="margin-top:40px;padding-top:28px;border-top:1px solid #E8E8E8">
+          <h3 style="margin-bottom:16px">Common enquiries</h3>
+          <p style="font-size:0.88rem;color:#71717A;line-height:1.7;margin-bottom:8px"><strong style="color:#1A1A1A">AI Governance Advisory:</strong> Tell us where AI fits in your business, what you have in place, and what you need help with. We will scope the engagement and send you a proposal.</p>
+          <p style="font-size:0.88rem;color:#71717A;line-height:1.7;margin-bottom:8px"><strong style="color:#1A1A1A">Academy Bootcamp:</strong> Email us with your name, the track you want (A: AI GRC, B: AI Auditing), and whether you need the student/switcher rate. We will send registration details.</p>
+          <p style="font-size:0.88rem;color:#71717A;line-height:1.7;margin-bottom:8px"><strong style="color:#1A1A1A">Business Leaders Workshop:</strong> Tell us your team size, preferred dates, and whether you need online or in-person delivery. We will send a proposal and invoice.</p>
+          <p style="font-size:0.88rem;color:#71717A;line-height:1.7"><strong style="color:#1A1A1A">Newsletter:</strong> Subscribe directly on the <a href="{{ url_for('home') }}#newsletter" style="color:#16A34A">homepage</a>. Free, weekly, every Tuesday.</p>
+        </div>
+      </div>
+
+      <div class="contact-form">
+        <h3>Send us a message</h3>
+        <form id="contactForm">
+          <div class="form-group">
+            <label>Your name</label>
+            <input type="text" placeholder="Full name" required>
+          </div>
+          <div class="form-group">
+            <label>Email address</label>
+            <input type="email" placeholder="you@example.com" required>
+          </div>
+          <div class="form-group">
+            <label>I'm interested in</label>
+            <select>
+              <option value="">Select an option</option>
+              <option>AI Governance Advisory</option>
+              <option>Academy Bootcamp (Track A: AI GRC)</option>
+              <option>Academy Bootcamp (Track B: AI Auditing)</option>
+              <option>Business Leaders Workshop</option>
+              <option>Agentic AI Services</option>
+              <option>Newsletter</option>
+              <option>Partnership</option>
+              <option>Something else</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label>Tell us more</label>
+            <textarea placeholder="What do you need? Any details that help us understand your situation."></textarea>
+          </div>
+          <button type="submit" class="form-submit">Send Message &#8594;</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+{% endblock %}
+
+{% block scripts %}
+<script>
+document.getElementById('contactForm').addEventListener('submit', function(e) {
+  e.preventDefault();
+  var btn = this.querySelector('.form-submit');
+  btn.textContent = 'Message sent! We will be in touch.';
+  btn.style.background = '#16A34A';
+  setTimeout(function() { btn.textContent = 'Send Message \u2192'; btn.style.background = '#1A1A1A'; }, 4000);
+});
+</script>
+{% endblock %}
